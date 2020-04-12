@@ -21,3 +21,9 @@ Passo a passo para executar os testes:
   
   Se quiser, apague o projeto do Cypress e tente fazer do zero acompanhando o vídeo. 
   Bons estudos!
+
+# Branches com conteúdos dos vídeos
+
+- [Vídeo 1](https://github.com/samlucax/youtube-cypress/tree/video1 "Vídeo 1")
+- [Vídeo 2](https://github.com/samlucax/youtube-cypress/tree/video2 "Vídeo 2")
+
