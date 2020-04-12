@@ -42,3 +42,32 @@ Cypress.Commands.add("createOng", () => {
         Cypress.env('createdOngId', response.body.id);
     });
 })
+
+Cypress.Commands.add("createNewIncident", () => {
+    Cypress.env('createdOngId')
+    cy.request({
+        method: 'POST',
+        url: 'http://localhost:3333/incidents',
+        headers: { 'Authorization': `${ Cypress.env('createdOngId') }`, },
+        body: {
+            title: "Animal com fome",
+            description: "Animal precisa de alimento para viver.",
+            value: "250"
+        }
+    }).then(response => {
+        expect(response.body.id).is.not.null;
+        cy.log(response.body.id);
+
+        Cypress.env('createdIncidentId', response.body.id);
+    });
+})
+
+Cypress.Commands.add("login", () => {
+    cy.visit('http://localhost:3000/profile', {
+        onBeforeLoad: (win) => {
+            win.localStorage.clear();
+            win.localStorage.setItem('ongId', Cypress.env('createdOngId'));
+            win.localStorage.setItem('ongName', 'Gatos queridos');
+        }
+    });
+})

@@ -31,7 +31,61 @@ describe('Ongs', () => {
 
     it('deve poder realizar um login no sistema', () => {
         cy.visit('http://localhost:3000/');
-        cy.get('input').type(Cypress.env('createdOngId'));
-        cy.get('.button').click();
+        cy.get('[data-cy=id]').type(Cypress.env('createdOngId'));
+        cy.get('[data-cy=submit]').click();
     });
+
+    // video 2
+    it('deve poder realizar logout no sistema', () => {
+        // cy.visit('http://localhost:3000/');
+        // cy.get('input').type(Cypress.env('createdOngId'));
+        // cy.get('.button').click();
+
+        // cy.visit('http://localhost:3000/profile', {
+        //     onBeforeLoad: (win) => {
+        //         win.localStorage.clear();
+        //         win.localStorage.setItem('ongId', Cypress.env('createdOngId'));
+        //         win.localStorage.setItem('ongName', 'Gatos queridos');
+        //     }
+        // });
+
+        cy.login();
+        cy.get('button').click();
+    });
+
+    it('deve poder cadastrar novos casos', () => {
+        cy.login()
+
+        cy.get('.button').click();
+
+        cy.get('[data-cy=title]').type('Animal abandonado');
+        cy.get('[data-cy=description]').type('Animal abando precisa de ajuda para alimentação');
+        cy.get('[data-cy=value]').type(50);
+
+        cy.route('POST', '**/incidents').as('newIncident');
+
+        cy.get('[data-cy=submit]').click();
+
+        cy.wait('@newIncident').then((xhr) => {
+            expect(xhr.status).to.eq(200);
+            expect(xhr.response.body).has.property('id');
+            expect(xhr.response.body.id).is.not.null;
+        });
+
+    });
+
+    it('deve poder excluir um caso', () => {
+        cy.createNewIncident();
+        cy.login();
+
+        cy.route('DELETE', '**/incidents/*').as('deleteIncident');
+
+        cy.get('[data-cy=delete]').click();
+
+        cy.wait('@deleteIncident').then((xhr) => {
+            expect(xhr.status).to.eq(204);
+            expect(xhr.response.body).to.be.empty;
+        });
+    });
+    
 });
