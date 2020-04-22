@@ -32,7 +32,7 @@ describe('Ongs', () => {
     it('deve poder realizar um login no sistema', () => {
         cy.visit('http://localhost:3000/');
         cy.get('[data-cy=id]').type(Cypress.env('createdOngId'));
-        cy.get('[data-cy=submit]').click();
+        cy.get('[data-cy=button-login]').click();
     });
 
     // video 2
@@ -50,13 +50,13 @@ describe('Ongs', () => {
         // });
 
         cy.login();
-        cy.get('button').click();
+        cy.get('[data-cy=button-logout]').click();
     });
 
     it('deve poder cadastrar novos casos', () => {
         cy.login()
 
-        cy.get('.button').click();
+        cy.get('[data-cy=button-new-incident]').click();
 
         cy.get('[data-cy=title]').type('Animal abandonado');
         cy.get('[data-cy=description]').type('Animal abando precisa de ajuda para alimentação');
@@ -64,7 +64,7 @@ describe('Ongs', () => {
 
         cy.route('POST', '**/incidents').as('newIncident');
 
-        cy.get('[data-cy=submit]').click();
+        cy.get('[data-cy=button-save]').click();
 
         cy.wait('@newIncident').then((xhr) => {
             expect(xhr.status).to.eq(200);
@@ -80,7 +80,7 @@ describe('Ongs', () => {
 
         cy.route('DELETE', '**/incidents/*').as('deleteIncident');
 
-        cy.get('[data-cy=delete]').click();
+        cy.get('[data-cy=button-delete]').click();
 
         cy.wait('@deleteIncident').then((xhr) => {
             expect(xhr.status).to.eq(204);
