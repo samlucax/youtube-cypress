@@ -1,5 +1,5 @@
 export const ELEMENTS = {
-  button: 'button',
-  newIncident: '.button',
-  delete: '[data-cy=delete]'
+  logout: '[data-cy=button-logout]',
+  newIncident: '[data-cy=button-new-incident]',
+  delete: '[data-cy=button-delete]'
 }

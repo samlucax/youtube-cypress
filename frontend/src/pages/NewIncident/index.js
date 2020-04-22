@@ -82,7 +82,7 @@ export default function NewIncident() {
           onClick={handleNewIncident} 
           className="button" 
           type="submit"
-          data-cy="submit" 
+          data-cy="button-save" 
         >Cadastrar</button>
       </form>
     </div>

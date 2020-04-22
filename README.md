@@ -21,3 +21,16 @@ Passo a passo para executar os testes:
   
   Se quiser, apague o projeto do Cypress e tente fazer do zero acompanhando o vídeo. 
   Bons estudos!
+
+
+## PageObjects
+
+Páginas:
+- Logon
+- Register (cadastro)
+- Profile (perfil da ong)
+- NewIncident (cadastro de casos)
+
+Cada pagina, possui: 
+- acoes -> index.js
+- elementos -> elements.js

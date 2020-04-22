@@ -32,7 +32,7 @@ describe('Ongs', () => {
         NewIncident.validarCadastroDeCasoComSucesso();
     });
 
-    it.only('deve poder excluir um caso', () => {
+    it('deve poder excluir um caso', () => {
         cy.createNewIncident();
         cy.login();
 

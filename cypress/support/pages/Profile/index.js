@@ -2,7 +2,7 @@ const el = require('./elements').ELEMENTS;
 
 class Profile {
   clicarNoBotaoLogout(){
-    cy.get(el.button).click(); 
+    cy.get(el.logout).click(); 
   }
 
   clicarNoBotaoCadastrarNovosCasos(){

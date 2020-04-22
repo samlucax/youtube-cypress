@@ -49,7 +49,7 @@ export default function Logon() {
           <button 
             className="button" 
             type="submit" 
-            data-cy="submit"
+            data-cy="button-login"
           >Entrar</button>
 
           <Link className="back-link" to="/register">
