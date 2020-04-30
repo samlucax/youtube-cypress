@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:run": "cypress run --config video=false --env allure=true",
+    "allure:report": "allure generate allure-results",
+    "allure:clear": "rm -r allure-results/ allure-report || true",
+    "allure:open": "allure open allure-report",
+    "test": "npx npm-run-all allure:clear cy:run allure:report"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^1.6.0",
     "cypress": "4.1.0"
   }
 }

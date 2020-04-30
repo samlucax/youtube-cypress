@@ -34,3 +34,9 @@ Páginas:
 Cada pagina, possui: 
 - acoes -> index.js
 - elementos -> elements.js
+
+## Relatórios
+
+- Allure Reports
+- Allure Reports Plugin
+- npm-run-all
