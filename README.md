@@ -21,3 +21,7 @@ Passo a passo para executar os testes:
   
   Se quiser, apague o projeto do Cypress e tente fazer do zero acompanhando o vídeo. 
   Bons estudos!
+  
+  ---
+  
+  [![HitCount](http://hits.dwyl.com/{username}/{project-name}.svg)](http://hits.dwyl.com/{username}/{project-name})
