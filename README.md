@@ -3,7 +3,7 @@
 
 ------------
 
-[![HitCount](http://hits.dwyl.com/{username}/{project-name}.svg)](http://hits.dwyl.com/{username}/{project-name})
+[![HitCount](http://hits.dwyl.com/samlucax/youtube-cypress.svg)](http://hits.dwyl.com/samlucax/youtube-cypress)
 
 <p align="center"><img src="youtube-cypress.png" width="100%"/></p>
 
