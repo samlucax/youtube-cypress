@@ -5,6 +5,8 @@
 
 [![HitCount](http://hits.dwyl.com/{username}/{project-name}.svg)](http://hits.dwyl.com/{username}/{project-name})
 
+<p align="center"><img src="youtube-cypress.png" width="100%"/></p>
+
 ## TL;TR;
 > **Chegou agora e quer ir direto para o código da primeira aula? [Clique aqui](https://github.com/samlucax/youtube-cypress/tree/video1), e depois faça clone do repositório. Bons estudos.**
 
