@@ -2143,10 +2143,10 @@ aws4@^1.8.0:
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.9.1.tgz#7e33d8f7d449b3f673cd72deb9abdc552dbe528e"
   integrity sha512-wMHVg2EOHaMRxbzgFJ9gtjOOCrI80OHLG14rxi28XwOW8ux6IiEbRCGGGqCtdAIg4FQCbW20k9RsT4y3gJlFug==
 
-axios@^0.33.0:
-  version "0.33.0"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.33.0.tgz#91fc5e231db5b81ab6474c0a945a603c55601f6e"
-  integrity sha512-juz19g7B3UWT9r3+tgRFQf2Bdy6IKDVroiyuVOUrkILVKHpqHL++K1l8ybvfdEP9B/VE72vk8vllbnedVCm/og==
+axios@^0.34.0:
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.34.0.tgz#8ecc4e5d865e3f36c9dc432ee490a88e8dd009c2"
+  integrity sha512-CkOmqy7BaT4VC9+wRUmSM3LVwCkKK3UYc7koEqIHWRpOTJypwdNctaVOgnOjhHP3599Ubq2K8KqYwfC7c8NdPQ==
   dependencies:
     follow-redirects "^1.15.4"
     form-data "^4.0.4"
